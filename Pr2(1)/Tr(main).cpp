@@ -1,29 +1,29 @@
 #include <iostream>
 #include <cmath>
 #include "Triangle.h"
-using namespace std;
+using namespace std; 
 
-
-bool Triangle::exst_tr() {
-        return ((a + b > c) && (b + c > a) && (a + c > b));
-    }
-    void Triangle::set(double a1, double b1, double c1) {
-        a = a1;
-        b = b1;
-        c = c1;
-    }
-    void Triangle::show() {
+int main()
+{
+    Triangle mas[3];
+    double a, b, c;
+    for (int i = 0; i < 3; i++) {
         setlocale(LC_ALL, "");
-        cout << "1 сторона: " << a << endl;
-        cout << "2 сторона: " << b << endl;
-        cout << "3 сторона: " << c << endl;
+        cout << "Введите a, b и c для треугольника № " << i + 1 << " через пробел: " << endl;
+        cin >> a >> b >> c;
+        mas[i].set(a, b, c);
+        if (!(mas[i].exst_tr())) {
+            setlocale(LC_ALL, "");
+            mas[i].show();
+            cout << "Треугольника с такими сторонами не существует, попробуйте ещё раз" << endl;
+            i--;
+        }
     }
-    double Triangle::perimetr() {
-        double p = a + b + c;
-        return p;
+    for (int i = 0; i < 3; i++) {
+        mas[i].show();
+        setlocale(LC_ALL, "");
+        cout << "Периметр треугольника: " << mas[i].perimetr() << endl;
+        cout << "Площадь треугольника: " << mas[i].square() << endl;
     }
-    double Triangle::square() {
-        double p = (a + b + c) / 2;
-        double s = sqrt(p * (p - a) * (p - b) * (p - c));
-        return s;
-    }
+    return 0;
+}
