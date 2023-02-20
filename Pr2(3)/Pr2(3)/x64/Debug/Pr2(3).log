@@ -1,0 +1,10 @@
+﻿  Figure.cpp
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(9,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(10,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(11,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(12,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(13,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\cpp\Pr2\proga\Pr2(3)\Pr2(3)\Figure.cpp(14,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  main(figure).cpp
+  Generating Code...
+  Pr2(3).vcxproj -> D:\cpp\Pr2\proga\Pr2(3)\x64\Debug\Pr2(3).exe

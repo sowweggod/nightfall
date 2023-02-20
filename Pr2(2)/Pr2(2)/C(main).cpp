@@ -25,10 +25,14 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 		setlocale(LC_ALL, "");
 		cout << "Площадь круга " << i + 1 << ": " << mas[i].square() << endl;
-		cout << "Можно ли описать треугольник у " << i + 1 << " окружности? " << mas[i].triangle_around() << endl;
-		cout << "Можно ли вписать треугольник в " << i + 1 << " окружность? " << mas[i].triangle_in() << endl;
-		cout << "Имеются ли точки пересечения? " << mas[i].check_circle() << endl;
+		cout << "Можно ли описать треугольник у " << i + 1 << " окружности? " << mas[i].triangle_around(radius, x_center, y_center) << endl;
+		cout << "Можно ли вписать треугольник в " << i + 1 << " окружность? " << mas[i].triangle_in(radius, x_center, y_center) << endl;
 
 	}
-
+	float r2, x2, y2;
+	cout << "Напишите радиус, x и y центра окружности которую хотите проверить на пересечение: " << endl;
+	cin >> r2 >> x2 >> y2;
+	for (int i = 0; i < 3; i++) {
+		cout << "Имеются ли точки пересечения? " << mas[i].check_circle(r2, x2, y2) << endl;
+	}
 }
