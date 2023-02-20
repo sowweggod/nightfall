@@ -16,7 +16,8 @@ void Circle::set_circle(float r, float x, float y)
 
 float Circle::square()
 {
-	return pow(radius, 2) * 3.14;
+
+	return (pow(radius, 2) * 3.14);
 }
 
 bool Circle::triangle_around(float a, float b, float c)
@@ -31,7 +32,7 @@ bool Circle::triangle_in(float a, float b, float c)
 
 bool Circle::check_circle(float r, float x_cntr, float y_cntr)
 {
-	return ((sqrt((pow((x_cntr - x_center) + (y_cntr - y_center), 2)))) < (r + radius));
+	return ((sqrt((pow((x_cntr - x_center), 2) + pow((y_cntr - y_center), 2))) < (r + radius)));
 };
 
 
