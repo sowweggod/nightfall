@@ -14,6 +14,8 @@ class Figure {
 public:
 	void figure(float x1, float x2, float x3, float x4, float y1, float y2, float y3, float y4);
 
+	void sinus();
+
 	void show();
 
 	bool is_prug();
