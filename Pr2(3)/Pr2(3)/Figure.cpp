@@ -12,8 +12,8 @@ void Figure::figure(float x1, float x2, float x3, float x4, float y1, float y2, 
     d = ((sqrt((pow((x3 - x4), 2) + pow((y3 - y4), 2)))));
     d1 = ((sqrt((pow((x1 - x3), 2) + pow((y1 - y3), 2)))));
     d2 = ((sqrt((pow((x2 - x4), 2) + pow((y2 - y4), 2)))));
-    cos = (a * b) / (abs(a) * abs(b));
-    sin = (abs(a) * abs(b)) * cos;
+    cos = ((((x1 + x3) * (x2 + x4)) + ((y1 + y3) * (y2 + y4))) / ((sqrt((pow((x1 + x3), 2)) + pow((y1 + y3), 2))) + (sqrt((pow((x2 + x4), 2)) + pow((y2 + y4), 2)))));
+    sin = sqrt((1 - pow((cos), 2)));
     S = (d1 * d2 * sin) / 2;
     P = a + b + c + d;
     
