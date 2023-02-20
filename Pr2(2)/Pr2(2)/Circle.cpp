@@ -7,17 +7,16 @@ void Circle::circle(float r, float x, float y)
 
 void Circle::set_circle(float r, float x, float y)
 {
-	r = radius;
+	radius = r;
 
-	x = x_center;
+	x_center = x;
 
-	y = y_center;
+	y_center = y;
 }
 
 float Circle::square()
 {
-
-	return (pow(radius, 2) * 3.14);
+	return pow(radius, 2) * 3.14;
 }
 
 bool Circle::triangle_around(float a, float b, float c)

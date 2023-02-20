@@ -25,6 +25,9 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 		setlocale(LC_ALL, "");
 		cout << "Площадь круга " << i + 1 << ": " << mas[i].square() << endl;
+		cout << "Можно ли описать треугольник у " << i + 1 << " окружности? " << mas[i].triangle_around() << endl;
+		cout << "Можно ли вписать треугольник в " << i + 1 << " окружность? " << mas[i].triangle_in() << endl;
+		cout << "Имеются ли точки пересечения? " << mas[i].check_circle() << endl;
 
 	}
 
