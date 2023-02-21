@@ -10,17 +10,17 @@ void Figure::figure(float x1, float x2, float x3, float x4, float y1, float y2, 
     b = ((sqrt((pow((x1 - x2), 2) + pow((y1 - y2), 2)))));
     c = ((sqrt((pow((x2 - x3), 2) + pow((y2 - y3), 2)))));
     d = ((sqrt((pow((x3 - x4), 2) + pow((y3 - y4), 2)))));
-    d1 = ((sqrt((pow((x1 - x3), 2) + pow((y1 - y3), 2)))));
-    d2 = ((sqrt((pow((x2 - x4), 2) + pow((y2 - y4), 2)))));
-    cos = ((((x1 + x3) * (x2 + x4)) + ((y1 + y3) * (y2 + y4))) / ((sqrt((pow((x1 + x3), 2)) + pow((y1 + y3), 2))) + (sqrt((pow((x2 + x4), 2)) + pow((y2 + y4), 2)))));
+    d1 = (pow((x1 - x3), 2) + pow((y1 - y3), 2));
+
+    d2 = (pow((x2 - x4), 2) + pow((y2 - y4), 2));
+
+
+    cos = ((((x3 - x1) * (x4 - x2)) + ((y3 - y1) * (y4 - y2))) / ((sqrt((pow((x1 + x3), 2)) + pow((y1 + y3), 2))) + (sqrt((pow((x2 + x4), 2)) + pow((y2 + y4), 2)))));
     sin = sqrt((1 - pow((cos), 2)));
 
-    S = (d1 * d2 * sin) / 2;
+    S = (sqrt(d1 * d2) * sin) / 2;
     P = a + b + c + d;
     
-}
-void Figure::sinus() {
-    cout << sin << endl; 
 }
 
 void Figure::show()
@@ -44,11 +44,10 @@ bool Figure::is_romb()
     return ((a == b) && (b == c) && (c == d));
 }
 
+
 bool Figure::is_in_circle()
 {
-    float P1 = (a + b + c + d) / 2;
-    float S1 = sqrt((P1 - a) * (P1 - d) * (P1 - c) * (P1 - d));
-    return (S1 == S);
+    return(sqrt((d1 * d2)) == (a * c + b * d));
 }
 
 bool Figure::is_out_circle()
